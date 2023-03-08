@@ -58,6 +58,8 @@ jobs:
           echo "changes=${output}" >> $GITHUB_OUTPUT
 
   images-build:
+    permissions:
+      packages: write
     uses: flowarp/containers/.github/workflows/action-image-build.yaml@main
     needs:
       - generate-build-matrix
