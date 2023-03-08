@@ -39,6 +39,8 @@ on:
 jobs:
   build-and-test:
     name: Build and test
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
     if: inputs.imagesToBuild != '' && inputs.imagesToBuild != '[]'
     strategy:
